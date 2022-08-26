@@ -17,7 +17,6 @@ img {
 }
 
 .button {
-  /* font-family: inherit; */
   cursor: pointer;
 }
 
@@ -135,6 +134,7 @@ nav {
 
 .auth-nav svg {
   margin-right: 10px;
+  fill: currentColor;
 }
 
 .auth-nav a {
@@ -160,6 +160,7 @@ nav {
   margin-left: auto;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/bg-hero.jpg');
   background-color: #c4c4c4;
@@ -253,18 +254,19 @@ nav {
 }
 
 .feature-icon {
-  width: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 120px;
   background-color: var(--taam-bg-color);
-  padding: 25px 100px;
   border-radius: 4px;
   margin-bottom: 30px;
 }
-.feature-list .title {
-  font-size: 14px;
-  line-height: 1.14;
 
+.feature-list .title {
+  line-height: 1.14;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .feature-list .text {
@@ -343,7 +345,8 @@ nav {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  fill: var(--social-icon-fill);
+  color: var(--social-icon-fill);
+  fill: currentColor;
 }
 
 .social-link:hover,
@@ -367,8 +370,8 @@ nav {
   height: 92px;
   border: 1px solid var(--social-icon-fill);
   border-radius: 4px;
-  fill: var(--social-icon-fill);
-  /* currentColor */
+  color: var(--social-icon-fill);
+  fill: currentColor;
 }
 
 .clients-link:hover,
@@ -450,7 +453,8 @@ address li:not(:last-child) {
   height: 100%;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  fill: var(--primery-bg-color);
+  color: var(--primery-bg-color);
+  fill: currentColor;
 }
 
 .social-link-footer:hover,
@@ -490,7 +494,12 @@ address li:not(:last-child) {
   width: 370px;
 }
 
-.project-list > li:hover {
+.project-link {
+  display: block;
+}
+
+.project-link:hover,
+.project-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -515,14 +524,6 @@ address li:not(:last-child) {
   border-right: 1px solid var(--project-list-border-color);
   border-left: 1px solid var(--project-list-border-color);
 }
-
-/* .project-list li:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-}
-
-.project-list li:nth-child(3n) {
-  margin-right: 0;
-} */
 
 .button-filter {
   display: flex;
